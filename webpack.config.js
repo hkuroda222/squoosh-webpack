@@ -23,21 +23,4 @@ module.exports = {
       },
     ],
   },
-  //   optimization: {
-  //     minimizer: [
-  //       new ImageMinimizerPlugin({
-  //         minimizer: {
-  //           implementation: ImageMinimizerPlugin.squooshMinify,
-  //           filename: "[name][ext]",
-  //           options: {
-  //             encodeOptions: {
-  //               mozjpeg: {
-  //                 quality: 80,
-  //               },
-  //             },
-  //           },
-  //         },
-  //       }),
-  //     ],
-  //   },
 };
