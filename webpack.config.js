@@ -21,6 +21,32 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(jpe?g|png)/i,
+        type: "asset/resource",
+        generator: {
+          filename: `./images/[name][ext]`,
+        },
+      },
+    ],
+  },
+  optimization: {
+    minimizer: [
+      new ImageMinimizerPlugin({
+        generator: [
+          {
+            preset: "webp",
+            implementation: ImageMinimizerPlugin.squooshGenerate,
+            options: {
+              encodeOptions: {
+                webp: {
+                  quality: 80,
+                },
+              },
+            },
+          },
+        ],
+      }),
     ],
   },
 };

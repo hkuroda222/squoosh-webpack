@@ -559,14 +559,15 @@ var react_dom = __webpack_require__(935);
 function App() {
   return /*#__PURE__*/react.createElement("div", {
     className: "App"
-  }, /*#__PURE__*/react.createElement("h1", null, "Hello, React!!!"));
+  }, /*#__PURE__*/react.createElement("img", {
+    src: "./images/sample.jpeg?as=webp"
+  }));
 }
 
 /* harmony default export */ const src_App = (App);
 ;// CONCATENATED MODULE: ./src/index.js
 
 
- // app.js の App をインポート
 
 var root = document.createElement("div");
 root.setAttribute("id", "root");
