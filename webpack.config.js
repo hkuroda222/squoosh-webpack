@@ -1,14 +1,15 @@
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
-  output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
-  },
+  mode: "production",
+  entry: ["./src/index.js"],
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        loader: "html-loader",
+      },
       {
         test: /\.(js|mjs|jsx)$/,
         exclude: /node_modules/,
@@ -30,6 +31,7 @@ module.exports = {
       },
     ],
   },
+
   optimization: {
     minimizer: [
       new ImageMinimizerPlugin({
@@ -49,4 +51,23 @@ module.exports = {
       }),
     ],
   },
+
+  plugins: [
+    new HtmlWebpackPlugin({ template: "./src/index.html" }),
+//     new ImageMinimizerPlugin({
+//       generator: [
+//         {
+//           preset: "webp",
+//           implementation: ImageMinimizerPlugin.squooshGenerate,
+//           options: {
+//             encodeOptions: {
+//               webp: {
+//                 quality: 70,
+//               },
+//             },
+//           },
+//         },
+//       ],
+//     }),
+//   ],
 };
