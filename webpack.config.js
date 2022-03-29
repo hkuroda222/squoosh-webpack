@@ -54,20 +54,20 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({ template: "./src/index.html" }),
-//     new ImageMinimizerPlugin({
-//       generator: [
-//         {
-//           preset: "webp",
-//           implementation: ImageMinimizerPlugin.squooshGenerate,
-//           options: {
-//             encodeOptions: {
-//               webp: {
-//                 quality: 70,
-//               },
-//             },
-//           },
-//         },
-//       ],
-//     }),
-//   ],
+    //     new ImageMinimizerPlugin({
+    //       generator: [
+    //         {
+    //           preset: "webp",
+    //           implementation: ImageMinimizerPlugin.squooshGenerate,
+    //           options: {
+    //             encodeOptions: {
+    //               webp: {
+    //                 quality: 70,
+    //               },
+    //             },
+    //           },
+    //         },
+    //       ],
+    //     }),
+  ],
 };
