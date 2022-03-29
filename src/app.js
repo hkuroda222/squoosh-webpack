@@ -3,7 +3,7 @@ import React from "react";
 function App() {
   return (
     <div className="App">
-      <img src="./images/sample.jpeg?as=webp" />
+      <img src="./images/sample.webp" />
     </div>
   );
 }
